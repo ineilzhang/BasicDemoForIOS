@@ -10,9 +10,10 @@
 		D9D784411F3D42840074D8F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784401F3D42840074D8F5 /* main.m */; };
 		D9D784441F3D42840074D8F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784431F3D42840074D8F5 /* AppDelegate.m */; };
 		D9D784471F3D42840074D8F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784461F3D42840074D8F5 /* ViewController.m */; };
-		D9D7844A1F3D42840074D8F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D784481F3D42840074D8F5 /* Main.storyboard */; };
 		D9D7844C1F3D42840074D8F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D7844B1F3D42840074D8F5 /* Assets.xcassets */; };
 		D9D7844F1F3D42840074D8F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7844D1F3D42840074D8F5 /* LaunchScreen.storyboard */; };
+		D9D784CE1F3DAA590074D8F5 /* NZLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784CD1F3DAA590074D8F5 /* NZLine.m */; };
+		D9D784D11F3DAAC10074D8F5 /* NZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784D01F3DAAC10074D8F5 /* NZDrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +23,13 @@
 		D9D784431F3D42840074D8F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D9D784451F3D42840074D8F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D9D784461F3D42840074D8F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D9D784491F3D42840074D8F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9D7844B1F3D42840074D8F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D7844E1F3D42840074D8F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D784501F3D42840074D8F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D784CC1F3DAA590074D8F5 /* NZLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZLine.h; sourceTree = "<group>"; };
+		D9D784CD1F3DAA590074D8F5 /* NZLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZLine.m; sourceTree = "<group>"; };
+		D9D784CF1F3DAAC10074D8F5 /* NZDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZDrawView.h; sourceTree = "<group>"; };
+		D9D784D01F3DAAC10074D8F5 /* NZDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZDrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +66,14 @@
 				D9D784431F3D42840074D8F5 /* AppDelegate.m */,
 				D9D784451F3D42840074D8F5 /* ViewController.h */,
 				D9D784461F3D42840074D8F5 /* ViewController.m */,
-				D9D784481F3D42840074D8F5 /* Main.storyboard */,
 				D9D7844B1F3D42840074D8F5 /* Assets.xcassets */,
 				D9D7844D1F3D42840074D8F5 /* LaunchScreen.storyboard */,
 				D9D784501F3D42840074D8F5 /* Info.plist */,
 				D9D7843F1F3D42840074D8F5 /* Supporting Files */,
+				D9D784CC1F3DAA590074D8F5 /* NZLine.h */,
+				D9D784CD1F3DAA590074D8F5 /* NZLine.m */,
+				D9D784CF1F3DAAC10074D8F5 /* NZDrawView.h */,
+				D9D784D01F3DAAC10074D8F5 /* NZDrawView.m */,
 			);
 			path = TouchTracker;
 			sourceTree = "<group>";
@@ -110,7 +117,7 @@
 				TargetAttributes = {
 					D9D7843B1F3D42840074D8F5 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = K5Q27PR69C;
+						DevelopmentTeam = 5JCS7ZHW9M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,7 +147,6 @@
 			files = (
 				D9D7844F1F3D42840074D8F5 /* LaunchScreen.storyboard in Resources */,
 				D9D7844C1F3D42840074D8F5 /* Assets.xcassets in Resources */,
-				D9D7844A1F3D42840074D8F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,21 +159,15 @@
 			files = (
 				D9D784471F3D42840074D8F5 /* ViewController.m in Sources */,
 				D9D784441F3D42840074D8F5 /* AppDelegate.m in Sources */,
+				D9D784D11F3DAAC10074D8F5 /* NZDrawView.m in Sources */,
 				D9D784411F3D42840074D8F5 /* main.m in Sources */,
+				D9D784CE1F3DAA590074D8F5 /* NZLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D9D784481F3D42840074D8F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9D784491F3D42840074D8F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D9D7844D1F3D42840074D8F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -273,9 +273,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K5Q27PR69C;
+				DEVELOPMENT_TEAM = 5JCS7ZHW9M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/TouchTracker",
+				);
 				INFOPLIST_FILE = TouchTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TouchTracker",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inspur.neil.TouchTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -285,9 +293,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K5Q27PR69C;
+				DEVELOPMENT_TEAM = 5JCS7ZHW9M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/TouchTracker",
+				);
 				INFOPLIST_FILE = TouchTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TouchTracker",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inspur.neil.TouchTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -312,6 +328,7 @@
 				D9D784551F3D42840074D8F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "NZDrawView.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+- (void)loadView
+{
+    self.view = [[NZDrawView alloc]initWithFrame:CGRectZero];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
