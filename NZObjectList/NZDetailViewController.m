@@ -38,6 +38,17 @@
 
 @implementation NZDetailViewController
 
+#pragma mark - override super method
+
+- (void)viewDidLayoutSubviews
+{
+    for (UIView *view in self.view.subviews) {
+        if ([view hasAmbiguousLayout]) {
+            NSLog(@"ambiguous:%@",view);
+        }
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     self.nameTextField.text = self.item.name;
@@ -65,6 +76,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+    for (UIView *view in self.view.subviews) {
+        if ([view hasAmbiguousLayout]) {
+            [view exerciseAmbiguityInLayout];
+        }
+    }
 }
 
 - (void)viewDidLoad {
@@ -75,6 +91,7 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - private method
 
 - (void)setItem:(NZItem *)item
 {
