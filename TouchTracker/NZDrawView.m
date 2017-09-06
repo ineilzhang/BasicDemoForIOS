@@ -49,7 +49,7 @@
         [self addGestureRecognizer:onceTap];
         
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
-//        [self addGestureRecognizer:longPress];
+        [self addGestureRecognizer:longPress];
         
         self.moveRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
         self.moveRecognizer.delegate = self;
