@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewCell.h
 //  NZObjectList
 //
 //  Created by Neil Zhang on 2017/8/9.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface TableViewCell : UITableViewCell
 
 @end
-
