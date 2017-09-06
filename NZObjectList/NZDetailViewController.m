@@ -51,6 +51,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+//    po [[UIWindow keyWindow] _autolayoutTrace] 检查有歧义的布局视图
     self.nameTextField.text = self.item.name;
     self.priceTextField.text = self.item.price;
     self.serialTextField.text = self.item.serial;
