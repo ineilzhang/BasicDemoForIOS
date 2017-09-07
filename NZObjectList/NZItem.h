@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NZItem : NSObject
+@interface NZItem : NSObject<NSCoding>
 
 @property (nonatomic,copy) NSString *name;
 

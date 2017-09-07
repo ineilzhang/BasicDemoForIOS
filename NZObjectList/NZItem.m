@@ -16,15 +16,17 @@
 
 @implementation NZItem
 
+#pragma mark - override super method
+
 - (instancetype)initWithName:(NSString *)name
                        price:(NSString *)price
                       serial:(NSString *)serial
 {
     if (self = [super init]) {
-        self.name = [self randomName];
-        self.price = [self randomPrice];
-        self.serial = [self randomSerial];
-        self.createDate = [NSDate date];
+//        self.name = [self randomName];
+//        self.price = [self randomPrice];
+//        self.serial = [self randomSerial];
+//        self.createDate = [NSDate date];
         NSUUID *uuid = [[NSUUID alloc]init];
         NSString *key = [uuid UUIDString];
         _itemKey = key;
@@ -45,6 +47,32 @@
                         price:nil
                        serial:nil];
 }
+
+#pragma mark - nscoding delegete method
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.price = [aDecoder decodeObjectForKey:@"price"];
+        self.serial = [aDecoder decodeObjectForKey:@"serial"];
+        self.createDate = [aDecoder decodeObjectForKey:@"createDate"];
+        self.itemKey = [aDecoder decodeObjectForKey:@"itemKey"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.price forKey:@"price"];
+    [aCoder encodeObject:self.serial forKey:@"serial"];
+    [aCoder encodeObject:self.createDate forKey:@"createDate"];
+    [aCoder encodeObject:self.itemKey forKey:@"itemKey"];
+}
+
+
+#pragma mark - private method
 
 - (UIColor *)randomColor
 {

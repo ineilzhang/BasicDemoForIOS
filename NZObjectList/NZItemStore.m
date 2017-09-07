@@ -17,16 +17,26 @@
 
 @implementation NZItemStore
 
+#pragma mark - overrice super method
+
 - (instancetype)init{
     if (self = [super init]) {
-        self.privateItems = [[NSMutableArray alloc]init];
+//        self.privateItems = [[NSMutableArray alloc]init];
+        self.privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:[self itemArchivePath]];
+        if (!self.privateItems) {
+            self.privateItems = [[NSMutableArray alloc]init];
+        }
     }
     return self;
 }
 
+#pragma mark - property method
+
 - (NSArray *)items{
     return [self.privateItems copy];
 }
+
+#pragma mark - public class method
 
 + (instancetype)shareManage{
     static NZItemStore *instance;
@@ -36,6 +46,8 @@
     });
     return instance;
 }
+
+#pragma mark - public method
 
 - (void)moveItemAtIndex:(NSInteger)fromIndex
                 toIndex:(NSInteger)toIndex
@@ -63,6 +75,22 @@
 
 - (NSArray *)allItems{
     return self.items;
+}
+
+- (BOOL)saveChanges
+{
+    NSString *path = [self itemArchivePath];
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
+}
+
+#pragma mark - private method
+
+- (NSString *)itemArchivePath
+{
+    NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"document dir:%@",docDirs);
+    NSString *docDir = [docDirs firstObject];
+    return [docDir stringByAppendingPathComponent:@"items.archive"];
 }
 
 @end

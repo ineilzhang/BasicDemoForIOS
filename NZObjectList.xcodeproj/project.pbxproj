@@ -152,7 +152,7 @@
 				TargetAttributes = {
 					D9D783FB1F3AECBD0074D8F5 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = K5Q27PR69C;
+						DevelopmentTeam = 5JCS7ZHW9M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -326,7 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = K5Q27PR69C;
+				DEVELOPMENT_TEAM = 5JCS7ZHW9M;
 				INFOPLIST_FILE = NZObjectList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inspur.neil.NZObjectList;
@@ -340,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = K5Q27PR69C;
+				DEVELOPMENT_TEAM = 5JCS7ZHW9M;
 				INFOPLIST_FILE = NZObjectList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inspur.neil.NZObjectList;

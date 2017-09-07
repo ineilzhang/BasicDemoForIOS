@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "NZItemStore.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,41 @@
     self.window.rootViewController = rootVC;
     self.window.backgroundColor  = [UIColor clearColor];
     [self.window makeKeyAndVisible];
+    
+#pragma mark - write text data to file
+    NSError *err;
+    NSString *text = @"Hello world!";
+    NSString *textPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *textFilePath = [textPath stringByAppendingPathComponent:@"text.txt"];
+    BOOL *myEssay = [text writeToFile:textFilePath
+                           atomically:YES
+                             encoding:NSUTF8StringEncoding
+                                error:&err];
+    if (!myEssay) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Write Failed!"
+                                                                       message:[err localizedDescription]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+        [alert addAction:defaultAction];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    }
+#pragma mark - read text data 
+    
+    NSString *readText = [NSString stringWithContentsOfFile:textFilePath
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:&err];
+    if (readText) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Read Successfully!"
+                                                                       message:readText
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+        [alert addAction:defaultAction];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    }
     return YES;
 }
 
@@ -34,8 +70,11 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if ([[NZItemStore shareManage] saveChanges]) {
+        NSLog(@"save changes successfully!");
+    }else{
+        NSLog(@"save changes failed!");
+    }
 }
 
 

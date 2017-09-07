@@ -71,7 +71,7 @@
     self.item.name = self.nameTextField.text;
     self.item.price = self.priceTextField.text;
     self.item.serial = self.serialTextField.text;
-    
+    self.item.createDate = (self.changDateVC.pickDate == nil ? self.item.createDate : self.changDateVC.pickDate);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -127,7 +127,7 @@
     }else{
         pickPhoto.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    pickPhoto.cameraOverlayView = overlay;
+//    pickPhoto.cameraOverlayView = overlay;
     pickPhoto.delegate = self;
     pickPhoto.allowsEditing = YES;
 //    pickPhoto.showsCameraControls = NO;
