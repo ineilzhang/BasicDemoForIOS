@@ -28,8 +28,8 @@
 #pragma mark - write text data to file
     NSError *err;
     NSString *text = @"Hello world!";
-    NSString *textPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *textFilePath = [textPath stringByAppendingPathComponent:@"text.txt"];
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *textFilePath = [docDir stringByAppendingPathComponent:@"text.txt"];
     BOOL *myEssay = [text writeToFile:textFilePath
                            atomically:YES
                              encoding:NSUTF8StringEncoding
@@ -59,6 +59,16 @@
         [alert addAction:defaultAction];
         [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
+    
+#pragma mark - W/R  XML property list file
+    
+    NSMutableDictionary *mutDic = [[NSMutableDictionary alloc]initWithDictionary:@{@"key":@"value"}];
+    NSString *mutDicPList = [docDir stringByAppendingPathComponent:@"mutDic"];
+    BOOL mutDicWriteResult = [mutDic writeToFile:mutDicPList atomically:YES];
+    NSLog(@"mutDicWriteResult=%d\nmutDicPList=%@",mutDicWriteResult,mutDicPList);
+    NSMutableDictionary *readMutDic = [[NSMutableDictionary alloc]initWithContentsOfFile:mutDicPList];
+    NSLog(@"readMutDic=%@",readMutDic);
+    
     return YES;
 }
 
