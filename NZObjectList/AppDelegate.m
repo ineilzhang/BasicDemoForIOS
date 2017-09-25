@@ -42,7 +42,7 @@
                                                                 style:UIAlertActionStyleDefault
                                                               handler:nil];
         [alert addAction:defaultAction];
-        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+//        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
 #pragma mark - read text data 
     
@@ -57,7 +57,7 @@
                                                                 style:UIAlertActionStyleDefault
                                                               handler:nil];
         [alert addAction:defaultAction];
-        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+//        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
     
 #pragma mark - W/R  XML property list file
@@ -68,6 +68,14 @@
     NSLog(@"mutDicWriteResult=%d\nmutDicPList=%@",mutDicWriteResult,mutDicPList);
     NSMutableDictionary *readMutDic = [[NSMutableDictionary alloc]initWithContentsOfFile:mutDicPList];
     NSLog(@"readMutDic=%@",readMutDic);
+    
+    
+#pragma mark - mainBundle demo
+    
+    NSBundle *applicationBundle = [NSBundle mainBundle];
+    NSString *path = [applicationBundle pathForResource:@"textString" ofType:@"strings"];
+    NSMutableDictionary *infoPlistDic = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+    NSLog(@"info.plist = %@",infoPlistDic);
     
     return YES;
 }

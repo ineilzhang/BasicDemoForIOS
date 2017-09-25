@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94A96471F78ED09007CE4DB /* NZItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A96451F78ED09007CE4DB /* NZItemCell.m */; };
+		D94A96481F78ED09007CE4DB /* NZItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94A96461F78ED09007CE4DB /* NZItemCell.xib */; };
+		D94A964B1F790AB4007CE4DB /* NZImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A964A1F790AB4007CE4DB /* NZImageViewController.m */; };
 		D9D784011F3AECBD0074D8F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784001F3AECBD0074D8F5 /* main.m */; };
 		D9D784041F3AECBD0074D8F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784031F3AECBD0074D8F5 /* AppDelegate.m */; };
 		D9D784071F3AECBD0074D8F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784061F3AECBD0074D8F5 /* ViewController.m */; };
@@ -20,37 +23,39 @@
 		D9E4B0EB1F5FFF5D006A035F /* NZImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E4B0DF1F5FFF5D006A035F /* NZImageStore.m */; };
 		D9E4B0EC1F5FFF5D006A035F /* NZItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E4B0E11F5FFF5D006A035F /* NZItem.m */; };
 		D9E4B0ED1F5FFF5D006A035F /* NZItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E4B0E31F5FFF5D006A035F /* NZItemStore.m */; };
-		D9E4B0EE1F5FFF5D006A035F /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E4B0E61F5FFF5D006A035F /* TableViewCell.m */; };
 		D9E4B0F01F600066006A035F /* head.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E4B0EF1F600066006A035F /* head.xib */; };
 		D9E4B0F21F600081006A035F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9E4B0F11F600081006A035F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D94A96441F78ED09007CE4DB /* NZItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZItemCell.h; sourceTree = "<group>"; };
+		D94A96451F78ED09007CE4DB /* NZItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZItemCell.m; sourceTree = "<group>"; };
+		D94A96461F78ED09007CE4DB /* NZItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZItemCell.xib; sourceTree = "<group>"; };
+		D94A96491F790AB4007CE4DB /* NZImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZImageViewController.h; sourceTree = "<group>"; };
+		D94A964A1F790AB4007CE4DB /* NZImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZImageViewController.m; sourceTree = "<group>"; };
 		D9D783FC1F3AECBD0074D8F5 /* NZObjectList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZObjectList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D784001F3AECBD0074D8F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9D784021F3AECBD0074D8F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9D784031F3AECBD0074D8F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D9D784051F3AECBD0074D8F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D9D784061F3AECBD0074D8F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D9D784051F3AECBD0074D8F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = NZObjectList/ViewController.h; sourceTree = "<group>"; };
+		D9D784061F3AECBD0074D8F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = NZObjectList/ViewController.m; sourceTree = "<group>"; };
 		D9D784091F3AECBD0074D8F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9D7840B1F3AECBD0074D8F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D7840E1F3AECBD0074D8F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D9E4B0D81F5FFF5D006A035F /* NZChangeDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZChangeDateViewController.h; sourceTree = "<group>"; };
-		D9E4B0D91F5FFF5D006A035F /* NZChangeDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZChangeDateViewController.m; sourceTree = "<group>"; };
-		D9E4B0DA1F5FFF5D006A035F /* NZChangeDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZChangeDateViewController.xib; sourceTree = "<group>"; };
-		D9E4B0DB1F5FFF5D006A035F /* NZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZDetailViewController.h; sourceTree = "<group>"; };
-		D9E4B0DC1F5FFF5D006A035F /* NZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZDetailViewController.m; sourceTree = "<group>"; };
-		D9E4B0DD1F5FFF5D006A035F /* NZDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZDetailViewController.xib; sourceTree = "<group>"; };
-		D9E4B0DE1F5FFF5D006A035F /* NZImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZImageStore.h; sourceTree = "<group>"; };
-		D9E4B0DF1F5FFF5D006A035F /* NZImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZImageStore.m; sourceTree = "<group>"; };
-		D9E4B0E01F5FFF5D006A035F /* NZItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZItem.h; sourceTree = "<group>"; };
-		D9E4B0E11F5FFF5D006A035F /* NZItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZItem.m; sourceTree = "<group>"; };
-		D9E4B0E21F5FFF5D006A035F /* NZItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZItemStore.h; sourceTree = "<group>"; };
-		D9E4B0E31F5FFF5D006A035F /* NZItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZItemStore.m; sourceTree = "<group>"; };
+		D9E4B0D81F5FFF5D006A035F /* NZChangeDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NZChangeDateViewController.h; path = NZObjectList/NZChangeDateViewController.h; sourceTree = "<group>"; };
+		D9E4B0D91F5FFF5D006A035F /* NZChangeDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NZChangeDateViewController.m; path = NZObjectList/NZChangeDateViewController.m; sourceTree = "<group>"; };
+		D9E4B0DA1F5FFF5D006A035F /* NZChangeDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NZChangeDateViewController.xib; path = NZObjectList/NZChangeDateViewController.xib; sourceTree = "<group>"; };
+		D9E4B0DB1F5FFF5D006A035F /* NZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NZDetailViewController.h; path = NZObjectList/NZDetailViewController.h; sourceTree = "<group>"; };
+		D9E4B0DC1F5FFF5D006A035F /* NZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NZDetailViewController.m; path = NZObjectList/NZDetailViewController.m; sourceTree = "<group>"; };
+		D9E4B0DD1F5FFF5D006A035F /* NZDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NZDetailViewController.xib; path = NZObjectList/NZDetailViewController.xib; sourceTree = "<group>"; };
+		D9E4B0DE1F5FFF5D006A035F /* NZImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NZImageStore.h; path = NZObjectList/NZImageStore.h; sourceTree = "<group>"; };
+		D9E4B0DF1F5FFF5D006A035F /* NZImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NZImageStore.m; path = NZObjectList/NZImageStore.m; sourceTree = "<group>"; };
+		D9E4B0E01F5FFF5D006A035F /* NZItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NZItem.h; path = NZObjectList/NZItem.h; sourceTree = "<group>"; };
+		D9E4B0E11F5FFF5D006A035F /* NZItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NZItem.m; path = NZObjectList/NZItem.m; sourceTree = "<group>"; };
+		D9E4B0E21F5FFF5D006A035F /* NZItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NZItemStore.h; path = NZObjectList/NZItemStore.h; sourceTree = "<group>"; };
+		D9E4B0E31F5FFF5D006A035F /* NZItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NZItemStore.m; path = NZObjectList/NZItemStore.m; sourceTree = "<group>"; };
 		D9E4B0E41F5FFF5D006A035F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		D9E4B0E51F5FFF5D006A035F /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		D9E4B0E61F5FFF5D006A035F /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		D9E4B0EF1F600066006A035F /* head.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = head.xib; sourceTree = "<group>"; };
+		D9E4B0EF1F600066006A035F /* head.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = head.xib; path = NZObjectList/head.xib; sourceTree = "<group>"; };
 		D9E4B0F11F600081006A035F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,9 +70,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D94A96401F78EB09007CE4DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9D784051F3AECBD0074D8F5 /* ViewController.h */,
+				D9D784061F3AECBD0074D8F5 /* ViewController.m */,
+				D9E4B0D81F5FFF5D006A035F /* NZChangeDateViewController.h */,
+				D9E4B0D91F5FFF5D006A035F /* NZChangeDateViewController.m */,
+				D9E4B0DB1F5FFF5D006A035F /* NZDetailViewController.h */,
+				D9E4B0DC1F5FFF5D006A035F /* NZDetailViewController.m */,
+				D94A96491F790AB4007CE4DB /* NZImageViewController.h */,
+				D94A964A1F790AB4007CE4DB /* NZImageViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D94A96411F78EB3A007CE4DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9D7840D1F3AECBD0074D8F5 /* LaunchScreen.storyboard */,
+				D9D784081F3AECBD0074D8F5 /* Main.storyboard */,
+				D9E4B0EF1F600066006A035F /* head.xib */,
+				D9E4B0DD1F5FFF5D006A035F /* NZDetailViewController.xib */,
+				D9E4B0DA1F5FFF5D006A035F /* NZChangeDateViewController.xib */,
+				D94A96441F78ED09007CE4DB /* NZItemCell.h */,
+				D94A96451F78ED09007CE4DB /* NZItemCell.m */,
+				D94A96461F78ED09007CE4DB /* NZItemCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D94A96421F78EB4A007CE4DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9E4B0E01F5FFF5D006A035F /* NZItem.h */,
+				D9E4B0E11F5FFF5D006A035F /* NZItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D94A96431F78EBBD007CE4DB /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				D9E4B0E21F5FFF5D006A035F /* NZItemStore.h */,
+				D9E4B0E31F5FFF5D006A035F /* NZItemStore.m */,
+				D9E4B0DE1F5FFF5D006A035F /* NZImageStore.h */,
+				D9E4B0DF1F5FFF5D006A035F /* NZImageStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 		D9D783F31F3AECBD0074D8F5 = {
 			isa = PBXGroup;
 			children = (
+				D94A96431F78EBBD007CE4DB /* Stores */,
+				D94A96421F78EB4A007CE4DB /* Models */,
+				D94A96411F78EB3A007CE4DB /* Views */,
+				D94A96401F78EB09007CE4DB /* Controllers */,
 				D9D783FE1F3AECBD0074D8F5 /* NZObjectList */,
 				D9D783FD1F3AECBD0074D8F5 /* Products */,
 			);
@@ -84,29 +143,10 @@
 		D9D783FE1F3AECBD0074D8F5 /* NZObjectList */ = {
 			isa = PBXGroup;
 			children = (
-				D9E4B0EF1F600066006A035F /* head.xib */,
-				D9E4B0D81F5FFF5D006A035F /* NZChangeDateViewController.h */,
-				D9E4B0D91F5FFF5D006A035F /* NZChangeDateViewController.m */,
-				D9E4B0DA1F5FFF5D006A035F /* NZChangeDateViewController.xib */,
-				D9E4B0DB1F5FFF5D006A035F /* NZDetailViewController.h */,
-				D9E4B0DC1F5FFF5D006A035F /* NZDetailViewController.m */,
-				D9E4B0DD1F5FFF5D006A035F /* NZDetailViewController.xib */,
-				D9E4B0DE1F5FFF5D006A035F /* NZImageStore.h */,
-				D9E4B0DF1F5FFF5D006A035F /* NZImageStore.m */,
-				D9E4B0E01F5FFF5D006A035F /* NZItem.h */,
-				D9E4B0E11F5FFF5D006A035F /* NZItem.m */,
-				D9E4B0E21F5FFF5D006A035F /* NZItemStore.h */,
-				D9E4B0E31F5FFF5D006A035F /* NZItemStore.m */,
 				D9E4B0E41F5FFF5D006A035F /* PrefixHeader.pch */,
-				D9E4B0E51F5FFF5D006A035F /* TableViewCell.h */,
-				D9E4B0E61F5FFF5D006A035F /* TableViewCell.m */,
 				D9D784021F3AECBD0074D8F5 /* AppDelegate.h */,
 				D9D784031F3AECBD0074D8F5 /* AppDelegate.m */,
-				D9D784051F3AECBD0074D8F5 /* ViewController.h */,
-				D9D784061F3AECBD0074D8F5 /* ViewController.m */,
-				D9D784081F3AECBD0074D8F5 /* Main.storyboard */,
 				D9D7840B1F3AECBD0074D8F5 /* Assets.xcassets */,
-				D9D7840D1F3AECBD0074D8F5 /* LaunchScreen.storyboard */,
 				D9E4B0F11F600081006A035F /* Info.plist */,
 				D9D783FF1F3AECBD0074D8F5 /* Supporting Files */,
 			);
@@ -186,6 +226,7 @@
 				D9E4B0F01F600066006A035F /* head.xib in Resources */,
 				D9E4B0E81F5FFF5D006A035F /* NZChangeDateViewController.xib in Resources */,
 				D9D7840A1F3AECBD0074D8F5 /* Main.storyboard in Resources */,
+				D94A96481F78ED09007CE4DB /* NZItemCell.xib in Resources */,
 				D9E4B0F21F600081006A035F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,13 +239,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E4B0EC1F5FFF5D006A035F /* NZItem.m in Sources */,
+				D94A96471F78ED09007CE4DB /* NZItemCell.m in Sources */,
 				D9D784071F3AECBD0074D8F5 /* ViewController.m in Sources */,
 				D9D784041F3AECBD0074D8F5 /* AppDelegate.m in Sources */,
 				D9E4B0E71F5FFF5D006A035F /* NZChangeDateViewController.m in Sources */,
-				D9E4B0EE1F5FFF5D006A035F /* TableViewCell.m in Sources */,
 				D9E4B0ED1F5FFF5D006A035F /* NZItemStore.m in Sources */,
 				D9D784011F3AECBD0074D8F5 /* main.m in Sources */,
 				D9E4B0E91F5FFF5D006A035F /* NZDetailViewController.m in Sources */,
+				D94A964B1F790AB4007CE4DB /* NZImageViewController.m in Sources */,
 				D9E4B0EB1F5FFF5D006A035F /* NZImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +260,7 @@
 				D9D784091F3AECBD0074D8F5 /* Base */,
 			);
 			name = Main.storyboard;
+			path = NZObjectList;
 			sourceTree = "<group>";
 		};
 		D9D7840D1F3AECBD0074D8F5 /* LaunchScreen.storyboard */ = {
@@ -226,6 +269,7 @@
 				D9D7840E1F3AECBD0074D8F5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = NZObjectList;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NZItemStore.h"
 #import "NZDetailViewController.h"
+#import "NZItemCell.h"
 
 @interface ViewController ()
 
@@ -68,27 +69,47 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];
+    
+//    向 UItableView 注册 UITableViewCell 类
+//    [self.tableView registerClass:[UITableViewCell class]
+//           forCellReuseIdentifier:@"UITableViewCell"];
+    
+//    向 UITableView 注册 NIB 文件
+    [self.tableView registerNib:[UINib nibWithNibName:@"NZItemCell" bundle:nil] forCellReuseIdentifier:@"NZItemCell"];
+    
 //    self.tableView.tableHeaderView = self.headView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[[NZItemStore shareManage] allItems] count] + 1;
+    return [[[NZItemStore shareManage] allItems] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NZItemStore *items = [NZItemStore shareManage];
-    if (indexPath.row == ([tableView numberOfRowsInSection:0] - 1)) {
-        cell.textLabel.text = @"No more items!";
-    }else{
-        cell.textLabel.text = [[[items allItems] objectAtIndex:indexPath.row] description];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    
+    NZItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NZItemCell" forIndexPath:indexPath];
+    NSArray *items = [[NZItemStore shareManage] allItems];
+    if (items && items.count != 0) {
+        NZItem *item = items[indexPath.row];
+        cell.nameLabel.text = item.name;
+        cell.serialLabel.text = item.serial;
+        cell.priceLabel.text = item.price;
+        cell.thumbnailView.image = item.thumbnail;
+        cell.actionBlock = ^{
+            NSLog(@"itme=%@",item);
+        };
     }
+    
+//    NZItemStore *items = [NZItemStore shareManage];
+//    if (indexPath.row == ([tableView numberOfRowsInSection:0] - 1)) {
+//        cell.textLabel.text = @"No more items!";
+//    }else{
+//        cell.textLabel.text = [[[items allItems] objectAtIndex:indexPath.row] description];
+//    }
     return cell;
 }
 

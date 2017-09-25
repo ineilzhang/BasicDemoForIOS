@@ -148,6 +148,7 @@
     }else{
         image = info[UIImagePickerControllerOriginalImage];
     }
+    [self.item setThumbnailFromImage:image];
     self.image.image = image;
     [[NZImageStore shareManager] setImage:image forKey:self.item.itemKey];
     [self dismissViewControllerAnimated:YES completion:nil];

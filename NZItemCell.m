@@ -1,14 +1,14 @@
 //
-//  TableViewCell.m
+//  NZItemCell.m
 //  NZObjectList
 //
-//  Created by Neil Zhang on 2017/8/9.
+//  Created by Neil Zhang on 2017/9/25.
 //  Copyright © 2017年 Neil Zhang. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "NZItemCell.h"
 
-@implementation TableViewCell
+@implementation NZItemCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,6 +19,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (IBAction)showImage:(id)sender
+{
+    if (self.actionBlock) {
+        self.actionBlock();
+    }
 }
 
 @end

@@ -21,10 +21,14 @@
 
 @property (nonatomic,strong) NSString *itemKey;
 
+@property (nonatomic,strong) UIImage *thumbnail;
+
 - (instancetype)initWithName:(NSString *)name;
 
 - (instancetype)initWithName:(NSString *)name
                        price:(NSString *)price
                       serial:(NSString *)serial;
+
+- (void)setThumbnailFromImage:(UIImage *)image;
 
 @end
