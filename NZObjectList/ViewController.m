@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "NZItemStore.h"
+#import "NZImageStore.h"
 #import "NZDetailViewController.h"
 #import "NZItemCell.h"
+#import "NZImageViewController.h"
 
 @interface ViewController ()
 
@@ -101,6 +103,12 @@
         cell.thumbnailView.image = item.thumbnail;
         cell.actionBlock = ^{
             NSLog(@"itme=%@",item);
+            NSString *imageKey = item.itemKey;
+            UIImage *image = [[NZImageStore shareManager] imageForKey:imageKey];
+            NZImageViewController *imageController = [[NZImageViewController alloc]init];
+            imageController.orginImage = image;
+//            [self.navigationController pushViewController:imageController animated:YES];
+            [self presentViewController:imageController animated:YES completion:nil];
         };
     }
     

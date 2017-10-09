@@ -32,6 +32,7 @@
 - (IBAction)changeDate:(id)sender;
 
 - (IBAction)takePhoto:(UIBarButtonItem *)sender;
+
 - (IBAction)clearImage:(id)sender;
 
 @end
@@ -76,6 +77,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    if ([self.item.price integerValue] >= 50) {
+        self.priceTextField.textColor = [UIColor redColor];
+    }else{
+        self.priceTextField.textColor = [UIColor greenColor];
+    }
     [self.view endEditing:YES];
     for (UIView *view in self.view.subviews) {
         if ([view hasAmbiguousLayout]) {

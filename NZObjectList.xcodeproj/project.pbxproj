@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D94A96471F78ED09007CE4DB /* NZItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A96451F78ED09007CE4DB /* NZItemCell.m */; };
 		D94A96481F78ED09007CE4DB /* NZItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94A96461F78ED09007CE4DB /* NZItemCell.xib */; };
-		D94A964B1F790AB4007CE4DB /* NZImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A964A1F790AB4007CE4DB /* NZImageViewController.m */; };
+		D967B6DE1F79EBB400C46F7F /* NZImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D967B6DC1F79EBB400C46F7F /* NZImageViewController.m */; };
 		D9D784011F3AECBD0074D8F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784001F3AECBD0074D8F5 /* main.m */; };
 		D9D784041F3AECBD0074D8F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784031F3AECBD0074D8F5 /* AppDelegate.m */; };
 		D9D784071F3AECBD0074D8F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D784061F3AECBD0074D8F5 /* ViewController.m */; };
@@ -31,8 +31,8 @@
 		D94A96441F78ED09007CE4DB /* NZItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZItemCell.h; sourceTree = "<group>"; };
 		D94A96451F78ED09007CE4DB /* NZItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZItemCell.m; sourceTree = "<group>"; };
 		D94A96461F78ED09007CE4DB /* NZItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZItemCell.xib; sourceTree = "<group>"; };
-		D94A96491F790AB4007CE4DB /* NZImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZImageViewController.h; sourceTree = "<group>"; };
-		D94A964A1F790AB4007CE4DB /* NZImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZImageViewController.m; sourceTree = "<group>"; };
+		D967B6DB1F79EBB400C46F7F /* NZImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZImageViewController.h; sourceTree = "<group>"; };
+		D967B6DC1F79EBB400C46F7F /* NZImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZImageViewController.m; sourceTree = "<group>"; };
 		D9D783FC1F3AECBD0074D8F5 /* NZObjectList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZObjectList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D784001F3AECBD0074D8F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9D784021F3AECBD0074D8F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 				D9E4B0D91F5FFF5D006A035F /* NZChangeDateViewController.m */,
 				D9E4B0DB1F5FFF5D006A035F /* NZDetailViewController.h */,
 				D9E4B0DC1F5FFF5D006A035F /* NZDetailViewController.m */,
-				D94A96491F790AB4007CE4DB /* NZImageViewController.h */,
-				D94A964A1F790AB4007CE4DB /* NZImageViewController.m */,
+				D967B6DB1F79EBB400C46F7F /* NZImageViewController.h */,
+				D967B6DC1F79EBB400C46F7F /* NZImageViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 				D9E4B0ED1F5FFF5D006A035F /* NZItemStore.m in Sources */,
 				D9D784011F3AECBD0074D8F5 /* main.m in Sources */,
 				D9E4B0E91F5FFF5D006A035F /* NZDetailViewController.m in Sources */,
-				D94A964B1F790AB4007CE4DB /* NZImageViewController.m in Sources */,
+				D967B6DE1F79EBB400C46F7F /* NZImageViewController.m in Sources */,
 				D9E4B0EB1F5FFF5D006A035F /* NZImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
