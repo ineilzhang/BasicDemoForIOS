@@ -8,6 +8,7 @@
 
 #import "NZDetailViewController.h"
 #import "NZChangeDateViewController.h"
+#import "NZVideoListTableViewController.h"
 #import "NZItemStore.h"
 #import "NZImageStore.h"
 #import "PrefixHeader.pch"
@@ -32,7 +33,7 @@
 - (IBAction)changeDate:(id)sender;
 
 - (IBAction)takePhoto:(UIBarButtonItem *)sender;
-
+- (IBAction)playLocalVideo:(UIBarButtonItem *)sender;
 - (IBAction)clearImage:(id)sender;
 
 @end
@@ -138,6 +139,13 @@
     pickPhoto.allowsEditing = YES;
 //    pickPhoto.showsCameraControls = NO;
     [self presentViewController:pickPhoto animated:YES completion:nil];
+}
+
+- (void)playLocalVideo:(UIBarButtonItem *)sender
+{
+    NZVideoListTableViewController *videoVC = [NZVideoListTableViewController new];
+//    [self presentViewController:videoVC animated:YES completion:nil];
+    [self.navigationController pushViewController:videoVC animated:YES];
 }
 
 - (IBAction)clearImage:(id)sender {

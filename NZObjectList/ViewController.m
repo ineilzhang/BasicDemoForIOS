@@ -82,11 +82,14 @@
 //    self.tableView.tableHeaderView = self.headView;
 }
 
+#pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
     return [[[NZItemStore shareManage] allItems] count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,35 +133,6 @@
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == ([tableView numberOfRowsInSection:0] - 1)) {
-        return NO;
-    }
-    return YES;
-}
-
-- (void)edit:(id)sender{
-    if (self.isEdit) {
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        [self setEditing:NO animated:YES];
-        self.isEdit = NO;
-    }else{
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        [self setEditing:YES animated:YES];
-        self.isEdit = YES;
-    }
-}
-
-- (void)add:(id)sender{
-    NZItem *item = [[NZItemStore shareManage] createItem];
-    NSInteger row = [[[NZItemStore shareManage] allItems] indexOfObject:item];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath]
-                          withRowAnimation:UITableViewRowAnimationTop];
-}
-
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if (indexPath.row == ([tableView numberOfRowsInSection:0] - 1)) {
@@ -181,8 +155,44 @@
     [self.itemsStore moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
+#pragma mark - Table view delegate
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == ([tableView numberOfRowsInSection:0] - 1)) {
+        return NO;
+    }
+    return YES;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return @"remove";
 }
+
+#pragma mark - private method
+
+- (void)edit:(id)sender{
+    if (self.isEdit) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+        self.isEdit = NO;
+    }else{
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+        self.isEdit = YES;
+    }
+}
+
+- (void)add:(id)sender{
+    NZItem *item = [[NZItemStore shareManage] createItem];
+    NSInteger row = [[[NZItemStore shareManage] allItems] indexOfObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationTop];
+}
+
+
+
+
 @end
