@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "NZReminderVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    NZReminderVC *remindVC = [[NZReminderVC alloc]init];
+    ViewController *hynoVC = [[ViewController alloc]init];
+    UITabBarController *root = [[UITabBarController alloc]init];
+    root.viewControllers = @[hynoVC,remindVC];
+    self.window.rootViewController = root;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
