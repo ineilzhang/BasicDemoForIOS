@@ -66,7 +66,7 @@
     
     
     //add text field
-    self.txtField = [[UITextField alloc]initWithFrame:CGRectMake(80, 80, 160, 40)];
+    self.txtField = [[UITextField alloc]initWithFrame:CGRectMake(80, -80, 160, 40)];
     self.txtField.borderStyle = UITextBorderStyleRoundedRect;
     self.txtField.placeholder = @"test";
     self.txtField.returnKeyType = UIReturnKeyDone;
@@ -75,6 +75,21 @@
     [self.view addSubview:scrollView];
     [self.view addSubview:control];
     [self.view addSubview:self.txtField];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //添加弹簧动画
+    [UIView animateWithDuration:1.0
+                          delay:3.0
+         usingSpringWithDamping:0.25
+          initialSpringVelocity:0.0
+                        options:0
+                     animations:^{
+                         CGRect frame = CGRectMake(80, 80, 160, 40);
+                         self.txtField.frame = frame;
+                     } completion:nil];
 }
 
 
@@ -125,6 +140,37 @@
         [hynoMessageLabel sizeToFit];
         hynoMessageLabel.center = CGPointMake(x, y);
         [self.view addSubview:hynoMessageLabel];
+        //设定label透明度的起始值
+        hynoMessageLabel.alpha = 0.0;
+        //label的透明度由0.0到1.0
+//        [UIView animateWithDuration:1.0
+//                         animations:^{
+//                             hynoMessageLabel.alpha = 1.0;
+//                         }];
+        [UIView animateWithDuration:1.0
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             hynoMessageLabel.alpha = 1.0;
+                         }
+                         completion:nil];
+        
+        //添加关键帧动画
+        [UIView animateKeyframesWithDuration:1.0
+                                       delay:0.0
+                                     options:0
+                                  animations:^{
+                                      [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.8 animations:^{
+                                          hynoMessageLabel.center = self.view.center;
+                                      }];
+                                      [UIView addKeyframeWithRelativeStartTime:0.8 relativeDuration:0.2 animations:^{
+                                          hynoMessageLabel.center = CGPointMake(arc4random() % width, arc4random() % height);
+                                      }];
+                                  } completion:^(BOOL finished) {
+                                      NSString *result = finished ? @"YES" : @"NO";
+                                      NSLog(@"are you finished? : %@",result);
+                                  }];
+        UIInterpolatingMotionEffect *motionEffect = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
     }
 }
 
