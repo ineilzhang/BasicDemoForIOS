@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D946B9F01F8B7C7C00074EB1 /* NZVideoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D946B9EF1F8B7C7C00074EB1 /* NZVideoListTableViewController.m */; };
+		D946BA151F8C6CCC00074EB1 /* NZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D946BA141F8C6CCC00074EB1 /* NZWebViewController.m */; };
 		D94A96471F78ED09007CE4DB /* NZItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A96451F78ED09007CE4DB /* NZItemCell.m */; };
 		D94A96481F78ED09007CE4DB /* NZItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94A96461F78ED09007CE4DB /* NZItemCell.xib */; };
 		D967B6DE1F79EBB400C46F7F /* NZImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D967B6DC1F79EBB400C46F7F /* NZImageViewController.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		D946B9EE1F8B7C7C00074EB1 /* NZVideoListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NZVideoListTableViewController.h; sourceTree = "<group>"; };
 		D946B9EF1F8B7C7C00074EB1 /* NZVideoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NZVideoListTableViewController.m; sourceTree = "<group>"; };
+		D946BA131F8C6CCC00074EB1 /* NZWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NZWebViewController.h; sourceTree = "<group>"; };
+		D946BA141F8C6CCC00074EB1 /* NZWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NZWebViewController.m; sourceTree = "<group>"; };
 		D94A96441F78ED09007CE4DB /* NZItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZItemCell.h; sourceTree = "<group>"; };
 		D94A96451F78ED09007CE4DB /* NZItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZItemCell.m; sourceTree = "<group>"; };
 		D94A96461F78ED09007CE4DB /* NZItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZItemCell.xib; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				D967B6DC1F79EBB400C46F7F /* NZImageViewController.m */,
 				D946B9EE1F8B7C7C00074EB1 /* NZVideoListTableViewController.h */,
 				D946B9EF1F8B7C7C00074EB1 /* NZVideoListTableViewController.m */,
+				D946BA131F8C6CCC00074EB1 /* NZWebViewController.h */,
+				D946BA141F8C6CCC00074EB1 /* NZWebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				D9D784071F3AECBD0074D8F5 /* ViewController.m in Sources */,
 				D9D784041F3AECBD0074D8F5 /* AppDelegate.m in Sources */,
 				D9E4B0E71F5FFF5D006A035F /* NZChangeDateViewController.m in Sources */,
+				D946BA151F8C6CCC00074EB1 /* NZWebViewController.m in Sources */,
 				D9E4B0ED1F5FFF5D006A035F /* NZItemStore.m in Sources */,
 				D9D784011F3AECBD0074D8F5 /* main.m in Sources */,
 				D946B9F01F8B7C7C00074EB1 /* NZVideoListTableViewController.m in Sources */,
