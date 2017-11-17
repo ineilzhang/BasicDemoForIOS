@@ -13,6 +13,9 @@
 		D90C820A1FBE77E8003A7713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90C82091FBE77E8003A7713 /* Assets.xcassets */; };
 		D90C820D1FBE77E8003A7713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90C820B1FBE77E8003A7713 /* LaunchScreen.storyboard */; };
 		D90C82101FBE77E8003A7713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C820F1FBE77E8003A7713 /* main.m */; };
+		D90C821C1FBE8CFD003A7713 /* NSThreadDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C821B1FBE8CFD003A7713 /* NSThreadDemoViewController.m */; };
+		D90C821F1FBE8D0C003A7713 /* NSOperationDmeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C821E1FBE8D0C003A7713 /* NSOperationDmeoViewController.m */; };
+		D90C82221FBE8D18003A7713 /* GCDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90C82211FBE8D18003A7713 /* GCDDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		D90C820C1FBE77E8003A7713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D90C820E1FBE77E8003A7713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90C820F1FBE77E8003A7713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D90C821A1FBE8CFD003A7713 /* NSThreadDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadDemoViewController.h; sourceTree = "<group>"; };
+		D90C821B1FBE8CFD003A7713 /* NSThreadDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadDemoViewController.m; sourceTree = "<group>"; };
+		D90C821D1FBE8D0C003A7713 /* NSOperationDmeoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDmeoViewController.h; sourceTree = "<group>"; };
+		D90C821E1FBE8D0C003A7713 /* NSOperationDmeoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationDmeoViewController.m; sourceTree = "<group>"; };
+		D90C82201FBE8D18003A7713 /* GCDDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDDemoViewController.h; sourceTree = "<group>"; };
+		D90C82211FBE8D18003A7713 /* GCDDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 		D90C81F41FBE77E8003A7713 = {
 			isa = PBXGroup;
 			children = (
+				D90C82191FBE8CB8003A7713 /* DownloadViewControllers */,
 				D90C81FF1FBE77E8003A7713 /* MultithreadingDemo */,
 				D90C81FE1FBE77E8003A7713 /* Products */,
 			);
@@ -69,6 +79,19 @@
 				D90C820F1FBE77E8003A7713 /* main.m */,
 			);
 			path = MultithreadingDemo;
+			sourceTree = "<group>";
+		};
+		D90C82191FBE8CB8003A7713 /* DownloadViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D90C821A1FBE8CFD003A7713 /* NSThreadDemoViewController.h */,
+				D90C821B1FBE8CFD003A7713 /* NSThreadDemoViewController.m */,
+				D90C821D1FBE8D0C003A7713 /* NSOperationDmeoViewController.h */,
+				D90C821E1FBE8D0C003A7713 /* NSOperationDmeoViewController.m */,
+				D90C82201FBE8D18003A7713 /* GCDDemoViewController.h */,
+				D90C82211FBE8D18003A7713 /* GCDDemoViewController.m */,
+			);
+			path = DownloadViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90C821C1FBE8CFD003A7713 /* NSThreadDemoViewController.m in Sources */,
 				D90C82051FBE77E8003A7713 /* ViewController.m in Sources */,
 				D90C82101FBE77E8003A7713 /* main.m in Sources */,
 				D90C82021FBE77E8003A7713 /* AppDelegate.m in Sources */,
+				D90C82221FBE8D18003A7713 /* GCDDemoViewController.m in Sources */,
+				D90C821F1FBE8D0C003A7713 /* NSOperationDmeoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
